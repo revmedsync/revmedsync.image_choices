@@ -1,0 +1,203 @@
+body {
+  background-color: #191919;
+}
+.main-body{
+  display: block;
+  justify-content: center;
+}
+
+.outer-txt{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+
+.inner-txt{
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #B9B4C7; 
+  font-size: 54px; 
+  font-weight: bold;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.out-wrap{
+  display: flex;
+  justify-content: center;
+}
+
+/* Glowing Borders */
+.in-wrap{
+  display:flex;
+  margin-top:-60px;
+  background-color: #EEEEEE;
+  width: 450px;
+  height: 480px;
+  justify-content: center;
+  border: 1px solid #610C9F;
+  transition: border-color 0.5s ease-in-out;
+}
+
+/* same insides */
+.wrapper {
+  display: flex;
+  width: 450px;
+  height: 480px;
+  justify-content: center;
+  margin-top: -0px;
+  background-color:#191919;
+}
+
+.carousel-container {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  overflow: hidden;
+  height: 435px;
+  border: 5px solid black;
+  margin-top: 15px;
+  cursor: url('circle-cursor.png'), auto;
+}
+
+#prev {
+  position: relative;
+  top: 50%;
+  padding-right:20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #AAAAAA;
+  border: none;
+  cursor: pointer;
+  font-size: 34px;
+  z-index: 1; /* Ensure buttons appear above the carousel frame */
+}
+
+#next {
+  position: relative;
+  top: 50%;
+  padding-left:20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #AAAAAA;
+  border: none;
+  cursor: pointer;
+  font-size: 34px;
+  z-index: 1; /* Ensure buttons appear above the carousel frame */
+}
+
+.carousel-slide {
+  display: flex;
+  width: fit-content;
+  
+}
+
+.carousel-slide img {
+  width: 300px; /* Adjust width as needed */
+  height: auto;
+  
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1; /* Ensure buttons appear above the carousel frame */
+}
+
+#prev {
+  left: -0px;
+}
+
+#next {
+  right: -0px;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    max-width: 303px; /* Adjust width for mobile devices */
+    border-width: 5px; /* Reduce border width for mobile devices */
+    
+  }
+  
+  .carousel-slide img {
+    max-width: 100%;
+  }
+  
+  button {
+    font-size: 18px; /* Decrease button font size for mobile */
+  }
+
+  .text {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #B9B4C7; 
+    font-size: 30px; 
+    font-weight: bold;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom:15px;
+  }
+}
+
+
+@media (max-width: 475px) {
+  .out-wrap{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 280px;
+  }
+  
+  /* Glowing Borders */
+  .in-wrap{
+    display:flex;
+    background-color: #EEEEEE;
+    width: 350px;
+    height: 400px;
+    justify-content: center;
+    border: 1px solid #610C9F;
+    transition: border-color 0.5s ease-in-out;
+  }
+  .wrapper {
+    display: flex;
+    width: 350px;
+    height: 400px;
+    justify-content: center;
+    background-color:#191919;
+  }
+
+  .carousel-container {
+    max-width: 350px; /* Adjust width for mobile devices */
+    border-width: 5px; /* Reduce border width for mobile devices */
+    height: 335px;
+  }
+  
+  .carousel-slide img {
+    max-width: 100%;
+  }
+  
+  button {
+    font-size: 18px; /* Decrease button font size for mobile */
+  }
+
+  .text {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #B9B4C7; 
+    font-size: 25px; 
+    font-weight: bold;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom:25px;
+  }
+}
